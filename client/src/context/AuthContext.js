@@ -8,7 +8,7 @@ const AuthContextProvider = (props) => {
   const [username, setUsername] = useState(undefined);
 
   const getLoggedIn = async () => {
-    const loggedInRes = await axios.get('https://treeoflinks.herokuapp.com//auth/loggedIn');
+    const loggedInRes = await axios.get('https://treeoflinks.herokuapp.com/auth/loggedIn');
 
     setLoggedIn(loggedInRes.data.loggedIn);
     setUsername(loggedInRes.data.username);

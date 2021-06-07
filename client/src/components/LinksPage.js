@@ -44,7 +44,6 @@ const LinksPage = () => {
   }, [username]);
 
   const addhttp = (url) => {
-    // if (!/^(?:f|ht)tps?\:\/\//.test(url)) url = "http://" + url;
     if (!/^(?:f|ht)tps?:\/\//.test(url)) url = "http://" + url;
     return url;
   }

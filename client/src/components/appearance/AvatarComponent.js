@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import Avatar from 'react-avatar-edit';
 import axios from 'axios';
 
-const AvatarComponent = ({ avatar, setAvatar, changeAvatar, setChangeAvatar }) => {
+const AvatarComponent = ({ avatar, setAvatar, changeAvatar, setChangeAvatar, loading }) => {
   const [preview, setPreview] = useState(undefined);
   const [previewFileName, setPreviewFileName] = useState(undefined);
 
@@ -68,14 +68,15 @@ const AvatarComponent = ({ avatar, setAvatar, changeAvatar, setChangeAvatar }) =
   }
 
   const renderAvatar = () => {
-    if (!avatar)
+    if (!avatar && !loading)
       return (
         <i className="massive user circle icon"></i>
       );
-    return (
-      <div>
-        <img src={avatar} alt='avatar' />
-      </div>
+    if (avatar)
+      return (
+        <div>
+          <img src={avatar} alt='avatar' />
+        </div>
     ); 
   }
 

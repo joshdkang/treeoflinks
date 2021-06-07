@@ -6,6 +6,7 @@ import axios from 'axios';
 const Appearance = () => {
   const [avatar, setAvatar] = useState(undefined);
   const [changeAvatar, setChangeAvatar] = useState(false);
+  const [loading, setLoading] = useState(true);
   const {username} = useContext(AuthContext);
 
   const bufferToB64 = (data) => {
@@ -29,13 +30,15 @@ const Appearance = () => {
     }
 
     (async function() {
+      setLoading(true);
       await getAvatar();
+      setLoading(false);
     })();
   }, [username, changeAvatar]);
 
   return (
     <div>
-      <AvatarComponent avatar={avatar} setAvatar={setAvatar} changeAvatar={changeAvatar} setChangeAvatar={setChangeAvatar} />
+      <AvatarComponent avatar={avatar} setAvatar={setAvatar} changeAvatar={changeAvatar} setChangeAvatar={setChangeAvatar} loading={loading} />
     </div>
   );
 }

@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'jdk-treeoflinks.netlify.app'
+      'https://jdk-treeoflinks.netlify.app'
     ],
     credentials: true
   })

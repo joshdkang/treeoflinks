@@ -70,7 +70,7 @@ const AvatarComponent = ({ avatar, setAvatar, changeAvatar, setChangeAvatar }) =
   const renderAvatar = () => {
     if (!avatar)
       return (
-        <i className="big user icon"></i>
+        <i className="massive user circle icon"></i>
       );
     return (
       <div>

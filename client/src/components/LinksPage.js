@@ -22,7 +22,6 @@ const LinksPage = () => {
 
         buffer = 'data:image/jpeg;base64,' + buffer;
         setAvatar(buffer);
-        setLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -40,6 +39,7 @@ const LinksPage = () => {
     (async function() {
       await getTree();
       await getAvatar();
+      setLoading(false);
     })();
   }, [username]);
 
@@ -72,10 +72,10 @@ const LinksPage = () => {
 
     if (!avatar && !loading)
       return (
-        <i className="big user icon"></i>
+        <i className="massive user circle icon"></i>
       );
       
-    if (!loading)
+    if (avatar)
       return (
         <img src={avatar} alt='avatar' />
       ); 

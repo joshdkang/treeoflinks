@@ -39,7 +39,9 @@ router.post('/register', async (req, res) => {
 
     // HTTP-only cookie cannot be read by javascript
     res.cookie('auth_token', token, {
-      httpOnly: true
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
     });
 
     res.status(201).send({ user, token });
@@ -59,7 +61,9 @@ router.post('/login', async (req, res) => {
     const user = await User.findByCredentials(req.body.username, req.body.password);
     const token = await user.generateAuthToken();
     res.cookie('auth_token', token, {
-      httpOnly: true
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
     });
     res.send({ user, token });
   } catch (err) {

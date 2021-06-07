@@ -12,7 +12,10 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ['https://treeoflinks.herokuapp.com'],
+    origin: [
+      'http://localhost:3000',
+      'https://jdk-treeoflinks.netlify.app'
+    ],
     credentials: true
   })
 );

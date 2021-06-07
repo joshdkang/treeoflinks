@@ -22,7 +22,7 @@ const Header = () => {
         <>
           <Link to="/admin" className="item">Links</Link>
           <Link to='/appearance' className="item">Appearance</Link>
-          <Link to={`/${username}`} className="item">My Treeoflinks: {`${window.location.origin.toString()}/${username}`}</Link>
+          <Link to={`/${username}`} className="item">My TreeofLinks: {`${window.location.origin.toString()}/${username}`}</Link>
           <LogOutBtn />
         </>
       )}

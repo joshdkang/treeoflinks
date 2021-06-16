@@ -1,6 +1,6 @@
 # treeoflinks
 
-[Demo](https://https://jdk-treeoflinks.netlify.app/)
+[Demo](https://jdk-treeoflinks.netlify.app/)
 
 ## Description
 

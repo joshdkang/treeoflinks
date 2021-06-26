@@ -4,7 +4,7 @@
 
 ## Description
 
-LinkTree full stack web application built with MERN (MongoDB, Express.js, React.js, Node.js) stack.
+[LinkTree](https://https://linktr.ee/) clone full stack web application built with MERN (MongoDB, Express.js, React.js, Node.js) stack.
 
 ## Libraries/Technologies Used
 
